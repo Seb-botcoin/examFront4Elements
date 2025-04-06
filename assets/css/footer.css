@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Playfair Display medium';
+    src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Medium.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Playfair Display bold';
+    src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf') format('ttf');
+    src: url('../fonts/Playfair_Display/playfair-display-bold_freefontdownload_org/playfair-display-bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Karla bold';
+    src: url('../fonts/Karla/static/Karla-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Karla regular';
+    src: url('../fonts/Karla/static/Karla-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  footer {
+    background-color: #FFFFFF;
+    padding: 2rem 0;
+    color: #363A2B;
+  }
+  
+  .footer-logo {
+    max-width: 150px; /* Ajustez la taille du logo si nécessaire */
+  }
+  
+  .footer-text {
+    color: #363A2B;
+    font-size: 1rem;
+  }
+  
+  .footer-title {
+    font-family: 'Karla Bold', sans-serif;
+    font-size: 1.25rem;
+    color: #363A2B;
+  }
+  
+  .icon-link img {
+    height: 24px; /* Ajustez la taille des icônes */
+    width: auto;
+  }
+  
+  .footer-reserver {
+    background-color: #4F6234;
+    color: #FFFFFF;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .footer-reserver:hover {
+    background-color: #3B4E2B; /* Effet survol */
+  }
+  
+  
+  
+  /* Styles pour centrer les icônes en mode responsive */
+  
+    .icon-link img {
+      margin-left: 0.5rem; /* Ajuste les espacements si nécessaire */
+      margin-right: 0.5rem; /* Équilibrer l'espacement entre les icônes */
+    }
+  
+  
+  .footer .col-lg-4 a:hover {
+    color: #4F6234; /* Optionnel : Ajoute une couleur lors du survol */
+    text-decoration: underline; /* Optionnel : Ajoute un effet au survol */
+  }
+  
+  /* Responsive : Mode vertical */
+  @media (max-width: 768px) {
+    .footer .col-lg-4 {
+      text-align: left; /* Garde l'alignement à gauche en mode responsive */
+      margin-bottom: 1.5rem; /* Ajoute un espacement entre les colonnes */
+    }
+  }
+  .footer-text {
+   font-size: 0.94rem;
+   padding: 1.4rem 0;
+  }
+  
+  .col-mentions a {
+    font-family: 'Karla Bold', sans-serif;
+    font-size: 0.94rem;
+    line-height: 2.2rem;
+    text-align: left; /* Assure un alignement à gauche sur tous les écrans */
+    color: inherit; /* Hérite la couleur du texte parent */
+    text-decoration: none; /* Supprime le soulignement */
+  }

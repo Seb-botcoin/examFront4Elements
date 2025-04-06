@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Playfair Display medium';
+    src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Medium.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Playfair Display bold';
+    src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Karla bold';
+    src: url('../fonts/Karla/static/Karla-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Karla regular';
+    src: url('../fonts/Karla/static/Karla-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  header {
+    color: #363A2B;
+  }
+  
+  .custom-header {
+    background-color: #e5e0dce3;
+    position: fixed; /* Fixe le header en haut de la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Place le header au-dessus de tout */
+  }
+  
+  .custom-container {
+    margin-left: 4.75rem;
+    margin-right: 4.75rem;
+  }
+  
+  .navbar {
+    font-size: 1.25rem;
+    font-family: 'Playfair Display medium', 'Karla regular', sans-serif;
+  }
+  
+  .navbar-brand {
+    font-family: 'Playfair Display bold', serif;
+  }
+  
+  .nav-link {
+    font-family: 'Karla regular', sans-serif;
+    font-size: 1rem;
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
+  
+  .logo {
+    max-height: 3.3rem;
+    margin-right: 1rem;
+  }
+  
+  
+  .menu-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+  }
+  
+  .icon {
+    height: 1.5rem;
+    width: auto;
+    margin-right: 0.5rem;
+  }
+  
+  .hide-responsive {
+    display: none !important;
+  }
+  
+  @media (min-width: 768px) {
+    .hide-responsive {
+      display: inline-block !important;
+    }
+  }
+ 
+  @media (max-width: 768px) {
+    .menu-right .hide-responsive {
+      display: none !important;
+    }
+  }
+   /*
+  @media (max-width: 1200px) {
+    .custom-header {
+      background-color: #e5e0dcec;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .custom-header {
+      background-color: #e5e0dcad;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .custom-header {
+      background-color: #e5e0dc4f;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .custom-header {
+      background-color: #e5e0dc00;
+    }
+  }
+  */
+  .reserver {
+    background-color: #4F6234;
+    border-radius: 6px;
+    color: #FFFFFF;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin: 0 1rem 0 3rem;
+  }
+  
+  .reserver a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+
+  @media (max-width: 500px) {
+    .navbar-toggler-icon,
+    .icon {
+      filter: brightness(0) invert(1); /* Rendre les icônes blanches */
+    }
+  }

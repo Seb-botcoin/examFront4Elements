@@ -1,0 +1,430 @@
+@font-face {
+  font-family: 'Playfair Display medium';
+  src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playfair Display bold';
+  src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf') format('ttf');
+  src: url('../fonts/Playfair_Display/playfair-display-bold_freefontdownload_org/playfair-display-bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla bold';
+  src: url('../fonts/Karla/static/Karla-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla regular';
+  src: url('../fonts/Karla/static/Karla-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*  MAIN PAGE  */
+/* Section Hero */
+.hero {
+  position: relative; /* Position relative pour contenir les enfants absolus */
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  margin-top: 0; /* Pas de décalage manuel, le header se chevauche naturellement */
+  overflow: hidden;
+}
+
+/* Vidéo de fond */
+.hero-video {
+  position: absolute; /* Permet à la vidéo de s'étendre dans tout le conteneur */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adapte la vidéo pour couvrir toute la section */
+  z-index: 1; /* Place la vidéo en arrière-plan */
+}
+
+/* Contenu superposé */
+.hero-content {
+  position: absolute; /* Permet de superposer le texte au-dessus de la vidéo */
+  top: 53%;
+  right: 5%;
+  width: 70%;
+  /*transform: translate(-50%, -50%); /* Centre parfaitement le texte */
+  z-index: 2; /* Place le contenu au-dessus de la vidéo */
+  /*text-align: center; */
+  color: #222020;
+}
+
+h1 {
+  font-family: 'Playfair Display medium';
+  font-size: 6.25rem;
+  text-align: right;
+  color: #D9C7B3;
+}
+
+/* FORUMULAIRE */
+.availability-form {
+  position: absolute;
+  
+  transform: translate(50%, -30%);
+  z-index: 2;
+  width: 51%;
+  margin: 0 auto; /* Centre le formulaire */
+  padding: 2rem 2rem 4rem 2rem;;
+  background-color: #D9C7B3; /* Fond blanc */
+  border-radius: 18px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+.form-title {
+  font-family: 'Playfair Display bold';
+  font-weight: 620;
+  font-size: 1.5rem;
+  color: #363A2B;
+  text-align: left;
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between; /* Espacement entre les sections */
+  gap: 1rem; /* Espacement horizontal */
+}
+
+.form-group {
+  flex: 1; /* Chaque section prend un espace égal */
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-family: 'Karla regular', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #363A2B;
+}
+
+select, input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #E1D2C2;
+  border-radius: 4px;
+}
+
+
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column; /* Sections en vertical sur petit écran */
+  }
+}
+
+.form-group-button {
+  display: flex;
+  justify-content: center; /* Centre le bouton horizontalement */
+  margin-top: 1rem;
+ }
+
+
+#searchButton {
+  position: absolute; /* Positionne le bouton de manière absolue par rapport au formulaire */
+  bottom: 0; 
+  left: 50%; /* Place le bouton à 50% de la largeur du formulaire */
+  transform: translate(-50%, 50%); /* Centre parfaitement le bouton au milieu */
+ 
+  display: flex; /* Active flexbox */
+  justify-content: center; /* Centre le texte horizontalement */
+  align-items: center; /* Centre le texte verticalement */
+  width: 11.25rem;
+  height: 3rem;
+  background-color: #363A2B;
+  color: #FFFFFF; /* Couleur du texte */
+  border: none;
+  border-radius: 6px;
+  padding: 0; /* Supprime les marges internes */
+  font-size: 1rem; /* Ajustez la taille si nécessaire */
+}
+
+#searchButton:hover{
+  background-color: #4F6234; /* Couleur au survol */
+  cursor: pointer; /* Change le curseur au survol */
+}
+
+main {
+  background-color: #E5E0DC;
+}
+
+/* cards hotel */
+
+.hotelsSectionTop {
+  margin-top: 10rem;
+  height: 10rem; /* Ajoute de l'espace en haut et en bas */
+}
+
+.hotel-section {
+  display: flex; /* Aligne la card et les photos côte à côte */
+  gap: 2rem; /* Espacement entre la card et la section photo */
+  align-items: flex-start; /* Aligne les éléments en haut */
+}
+.hotel-section {
+  display: flex; /* Aligne la card et les photos côte à côte */
+  gap: 2rem; /* Espacement entre la card et la section photo */
+  align-items: stretch; /* Aligne tous les éléments à la même hauteur */
+}
+
+.hotel-card {
+  flex: 2; /* La card occupe 40% de la largeur totale */
+  max-width: 40%; /* Limite la largeur maximale à 40% */
+  margin: 1rem 0 0 10rem; /* Ajoute un espacement autour de la card */
+  padding: 2rem; /* Ajuste le padding interne */
+  background-color: #E5E0DC;
+  font-family: 'Karla', sans-serif;
+  text-align: left;
+}
+
+.photo-section {
+  display: flex; /* Positionne les photos côte à côte */
+  flex: 3; /* La section photo occupe 60% de la largeur totale */
+  gap: 1rem; /* Ajoute un espacement de 1rem entre les photos */
+  height: auto; /* La section photo s'ajuste automatiquement en hauteur */
+  overflow: hidden; /* Empêche les débordements */
+}
+
+.hotel-photo {
+  height: 100%; /* Les images remplissent la hauteur de leur conteneur */
+  object-fit: cover; /* Recouvre toute la zone disponible sans déformer */
+}
+
+.pleine {
+  flex: 2; /* La première photo occupe 40% de la section photo */
+  max-width: 488px; /* Fixe une largeur maximale pour la photo */
+}
+
+.tronquee {
+  flex: 3; /* La seconde photo occupe 60% de la section photo */
+  margin-right: 0; /* Supprime toute marge à droite */
+}
+
+.tronqueeGauche {
+  flex: 3; /* Occupe moins de place que les autres photos */
+
+  margin-left: 0; /* Ajoute un espacement à droite pour l'esthétique */
+}
+
+
+@media (max-width: 768px) {
+  .hotel-section {
+    flex-direction: column; /* Empile la card et les photos */
+  }
+}
+
+.hotel-title {
+  font-family: 'Playfair Display medium', serif;
+  text-align: left;
+  font-size: 6rem;
+  color: #222020;
+  margin-bottom: 1rem;
+}
+
+.hotel-info {
+  display: flex;
+  align-items: center; /* Aligne l'icône et le texte verticalement */
+  gap: 0.75rem; /* Ajoute un espace entre l'icône et le texte */
+}
+
+.hotel-icon {
+  width: 32px; /* Taille de l'icône */
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.hotel-rating {
+  display: flex;
+  align-items: center; /* Aligne les étoiles et les avis */
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.stars img {
+  display: inline-block; /* Assure un comportement propre des images */
+  vertical-align: middle; /* Aligne les images au milieu du texte */
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  font-size: 1.25rem;
+  color: #363A2B; /* Couleur pour les étoiles */
+}
+
+.reviews {
+  font-size: 0.93rem;
+  color: #666666;
+}
+
+.hotel-description {
+  font-size: 0.93rem;
+  color: #363A2B;
+}
+
+.reservation h1{
+  margin-top: 10rem;
+}
+
+
+/*---------------------------------------------------*/
+
+/* Section Concept */
+/* Section Concept */
+.concept {
+  margin-top: 15rem;
+}
+
+.concept h3, .author h3 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  font-family: 'Playfair Display bold', serif;
+  color: #363a2b;
+}
+
+.concept-article, .author .concept-article p {
+  font-size: 1.25rem;
+  color: #363a2b;
+  line-height: 1.8; /* Améliore la lisibilité */
+}
+
+.concept-img img, .author-img img {
+  object-fit: cover; /* Maintient les proportions */
+  width: 100%; /* Images adaptatives */
+  height: 100%; /* Utilisé pour remplir le conteneur */
+}
+
+/* Section Author */
+.author {
+  margin-top: 5rem;
+  padding: 5rem;
+}
+
+.author-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.signature {
+  font-size: 1.5rem;
+  color: #363a2b;
+  margin-top: 3rem;
+  text-align: center; /* Alignement par défaut pour petits écrans */
+}
+
+.signature span {
+  font-weight: 700;
+}
+
+/* Responsivité */
+@media (min-width: 768px) {
+  .author-img.mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .author-item-desktop img {
+    display: none;
+  }
+
+  .author-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+
+/*///////////////////////////////////////////////////////////////////////*/
+/* Section Hôtel Eau */
+
+.hotelEau {
+  padding: 5rem 0;
+}
+
+/* Image tronquée */
+.imageTronquee {
+  position: absolute; /* Positionnement pour tronquer l'image */
+  left: 0;
+  top: 0;
+  width: 100%; /* S'étend sur toute la largeur de la colonne */
+  height: 100%; /* Remplit la hauteur de la colonne */
+  clip-path: inset(0 66.66% 0 0); /* Affiche 1/3 de l'image à gauche */
+  overflow: hidden;
+}
+
+.imageTronquee img {
+  object-fit: cover; /* Tronque l'image tout en maintenant son ratio */
+  height: 100%; /* Remplit le conteneur verticalement */
+  width: 100%; /* Largeur totale */
+}
+
+/* Image classique */
+.imageClassique img {
+  object-fit: cover;
+  width: 100%;
+  height: auto; /* Maintient les proportions */
+}
+
+/* Contenu */
+.content h2 {
+  font-family: 'Playfair Display bold', serif;
+  font-size: 2.5rem;
+  color: #363a2b;
+}
+
+.hubNote img {
+  max-height: 24px;
+}
+
+.article {
+  font-size: 1rem;
+  color: #363a2b;
+  line-height: 1.5;
+}
+
+.sectionBouton .btn {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+
+/* ----------------------------------------------------------------- */
+
+/* Réinitialisation des marges pour la grille */
+    /* Supprime les marges globales */
+
+
+    .fixed-height {
+      height: 621px; /* Hauteur fixe */
+      object-fit: cover; /* Garde les proportions tout en remplissant la hauteur */
+      width: 100%; /* Ajuste la largeur au conteneur */
+    }
+
+    .hotel-cards {
+      margin: auto 0; /* Ajoute un espacement autour de la card */
+      padding : 2rem 5rem;
+      background-color: #E5E0DC;
+      font-family: 'Karla', sans-serif;
+      text-align: left;
+    }
+    
+    .mt-10{
+      margin-top: 10rem; /* Ajoute un espacement en haut */
+    }
+
+    .pl-15{
+      padding: 0 1rem; /* Ajoute un espacement à gauche */
+    }

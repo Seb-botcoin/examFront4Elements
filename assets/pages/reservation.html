@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header pleine largeur</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../assets/components/buttons/main-button.css">
+</head>
+<body>
+    <header class="custom-header">
+        <div class="custom-container">
+          <nav class="navbar navbar-expand-lg">
+            <div class="d-flex align-items-center justify-content-between w-100">
+              
+              <!-- Bloc gauche avec logo et menu burger -->
+              <div class="d-flex align-items-center">
+                <!-- Logo -->
+                <a href="../../index.html" class="logo-link">
+                    <img src="../images/logo/logo-noir.png" alt="Logo" class="logo hide-responsive">
+                </a>
+                <!-- Menu burger et menu gauche -->
+                <div class="menu-wrapper">
+                  <button class="navbar-toggler d-lg-none" type="button" aria-controls="leftMenu">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  
+                  <div class="menu collapse d-lg-flex" id="leftMenu">
+                    <ul class="navbar-nav flex-lg-row">
+                      <li class="nav-item"><a class="nav-link" href="feu.html">Feu</a></li>
+                      <li class="nav-item"><a class="nav-link" href="air.html">Air</a></li>
+                      <li class="nav-item"><a class="nav-link" href="terre.html">Terre</a></li>
+                      <li class="nav-item"><a class="nav-link" href="eau.html">Eau</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Bloc droit avec icônes -->
+              <div class="d-flex align-items-center menu-right">
+                <a class="nav-link hide-responsive" href="#">Contact</a>
+                <a class="nav-link" href="#">
+                  <img src="../images/icons/instagram.svg" alt="Icône 1" class="icon">
+                </a>
+                <a class="nav-link" href="#">
+                  <img src="../images/icons/facebook.svg" alt="Icône 2" class="icon">
+                </a>
+                <div class="reserver hide-responsive">
+                  <a href="#">Reserver</a>
+                </div>
+                <a class="nav-link hide-responsive" href="#">Se connecter</a>
+              </div>
+              
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="container my-4">
+            <h1 class="text-center mb-4 pt-5 pb-5">Formulaire de réservation</h1>
+            <form id="reservationForm"  onsubmit="return validateForm()">
+              <!-- Section 1 : Informations personnelles -->
+              <fieldset class="mb-4">
+                <legend>Informations personnelles</legend>
+                <div class="mb-3">
+                  <label for="fullName" class="form-label">Nom et Prénom</label>
+                  <input type="text" id="fullName" class="form-control" required minlength="2" maxlength="50" pattern="[a-zA-Z\s]+" placeholder="Votre nom complet">
+                  <div class="text-danger mt-1 error-message" id="nameError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="address" class="form-label">Adresse postale</label>
+                  <input type="text" id="address" class="form-control" required maxlength="150" placeholder="Votre adresse complète">
+                  <div class="text-danger mt-1 error-message" id="addressError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" class="form-control" required maxlength="100" placeholder="Votre email">
+                  <div class="text-danger mt-1 error-message" id="emailError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Numéro de téléphone</label>
+                  <input type="tel" id="phone" class="form-control" required pattern="[0-9\s\-\/]+" maxlength="14" placeholder="Votre numéro">
+                  <div class="text-danger mt-1 error-message" id="phoneError"></div>
+                </div>
+              </fieldset>
+          
+              <!-- Section 2 : Informations de réservation -->
+              <fieldset class="mb-4">
+                <legend>Informations de réservation</legend>
+                <div class="mb-3">
+                  <label for="hotelChoice" class="form-label">Choix de l'hôtel</label>
+                  <select id="hotelChoice" class="form-select" required>
+                    <option value="igloo" data-price="500">Igloos (500€/nuit)</option>
+                    <option value="suite" data-price="850">Suite Laponne (850€/nuit)</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="guests" class="form-label">Nombre de personnes</label>
+                  <select id="guests" class="form-select" required>
+                    <option value="1">1 personne</option>
+                    <option value="2">2 personnes</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="arrivalDate" class="form-label">Date d'arrivée</label>
+                  <input type="date" id="arrivalDate" class="form-control" required>
+                  <div class="text-danger mt-1 error-message" id="arrivalDateError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="departureDate" class="form-label">Date de départ</label>
+                  <input type="date" id="departureDate" class="form-control" required>
+                  <div class="text-danger mt-1 error-message" id="departureDateError"></div>
+                </div>
+              </fieldset>
+          
+              <!-- Section 3 : Options supplémentaires -->
+              <fieldset class="mb-4">
+                <legend>Options supplémentaires</legend>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="chauffeur" id="chauffeurOption" data-price="11">
+                  <label class="form-check-label" for="chauffeurOption">Chauffeur (11€/jour)</label>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="breakfast" id="breakfastOption" data-price="15">
+                  <label class="form-check-label" for="breakfastOption">Petit déjeuner (15€/personne/jour)</label>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="meal" id="mealOption" data-price="25">
+                  <label class="form-check-label" for="mealOption">Repas (25€/personne/repas)</label>
+                </div>
+                <div id="dietaryRestrictions" class="d-none">
+                  <label class="form-label">Régime alimentaire particulier</label>
+                  <select id="dietChoice" class="form-select">
+                    <option value="none">Non</option>
+                    <option value="vegan">Végan</option>
+                    <option value="vegetarian">Végétarien</option>
+                  </select>
+                  <label class="form-label mt-3">Restrictions alimentaires</label>
+                  <select id="restrictions" class="form-select">
+                    <option value="none">Aucune</option>
+                    <option value="gluten-free">Sans gluten</option>
+                    <option value="lactose-free">Sans lactose</option>
+                    <option value="allergy">Autres allergies</option>
+                  </select>
+                </div>
+              </fieldset>
+          
+              <!-- Bouton Valider -->
+              <button type="button" class="btn btn-primary w-100" id="submitBtn">Valider</button>
+            </form>
+          </div>
+          
+    </main>
+
+    <footer class="footer bg-white py-4">
+      <div class="custom-container">
+        <div class="row">
+          <!-- Colonne 1 : Logo, texte et icônes -->
+          <div class="col-lg-4 col-12 mb-3">
+            <img src="../images/logo/logo-noir.png" alt="Logo" class="footer-logo mb-2">
+            <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="d-flex">
+              <a href="#" class="icon-link me-2">
+                <img src="../images/icons/instagram.svg" alt="Instagram Icon">
+              </a>
+              <a href="#" class="icon-link">
+                <img src="../images/icons/facebook.svg" alt="Facebook Icon">
+              </a>
+            </div>
+          </div>
+          <!-- Colonne 2 : Informations de contact -->
+          <div class="col-lg-4 col-12 mb-3">
+            <h5 class="footer-title mb-2">Contact</h5>
+            <p>Adresse : 8 avenue exemple</p>
+            <p>Ouverture : Tous les jours de 9h à 20h30</p>
+            <p>Tél : 33 08 280 28002</p>
+            <a href="#" class="btn btn-outline-primary footer-reserver">Reserver en ligne</a>
+          </div>
+    
+          <!-- Colonne 3 : Mentions légales -->
+          <div class="col-lg-4 col-12 mb-3 col-mentions">
+            <p><a href="#">Mentions légales</a></p>
+            <p><a href="#">Crédits</a></p>
+            <p><a href="#">CGV</a></p>
+            <p><a href="#">Confidentialité</a></p>
+          </div>
+        </div>
+      </div>
+      <!-- Modale Bootstrap -->
+<div class="modal fade" id="recapModal" tabindex="-1" aria-labelledby="recapModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="recapModalLabel">Récapitulatif de votre réservation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="recapDetails">
+            <!-- Les détails seront insérés dynamiquement via JavaScript -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+          <button type="button" id="confirmPayment" class="btn btn-primary">Passer au paiement</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </footer>
+    
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+  <script src="../../script.js"></script>
+</html>

@@ -1,0 +1,50 @@
+
+@font-face {
+    font-family: 'Playfair Display medium';
+    src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Medium.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Playfair Display bold';
+    src: url('../fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf') format('ttf');
+    src: url('../fonts/Playfair_Display/playfair-display-bold_freefontdownload_org/playfair-display-bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Karla bold';
+    src: url('../fonts/Karla/static/Karla-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Karla regular';
+    src: url('../fonts/Karla/static/Karla-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+
+  
+.main-button {
+    display: block;
+    width: 11.25rem;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    background-color: #4F6234;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .main-button:hover {
+    background-color: #3B4E2B; /* Couleur légèrement plus foncée au survol */
+  }
