@@ -94,31 +94,7 @@
       display: none !important;
     }
   }
-   /*
-  @media (max-width: 1200px) {
-    .custom-header {
-      background-color: #e5e0dcec;
-    }
-  }
-  
-  @media (max-width: 1000px) {
-    .custom-header {
-      background-color: #e5e0dcad;
-    }
-  }
-  
-  @media (max-width: 750px) {
-    .custom-header {
-      background-color: #e5e0dc4f;
-    }
-  }
-  
-  @media (max-width: 500px) {
-    .custom-header {
-      background-color: #e5e0dc00;
-    }
-  }
-  */
+ 
   .reserver {
     background-color: #4F6234;
     border-radius: 6px;
@@ -139,7 +115,7 @@
   }
 
 
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     .navbar-toggler-icon,
     .icon {
       filter: brightness(0) invert(1); /* Rendre les icônes blanches */

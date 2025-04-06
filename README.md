@@ -2,6 +2,8 @@
 Exam Front
 Utilsation de Boostrap 5.3, html, css, JS
 
+git https://github.com/Seb-botcoin/examFront4Elements.git
+gitpage https://seb-botcoin.github.io/examFront4Elements/
 
 BOOTSTRAP
 Je me suis tiré une balle dans le pied avec Boostrap. J'ai pensé que ça me ferai gagner du temps sur le formulaire, mais j'ai perdi enormement de temps à me débloquer lorsqu il a fallut inverser la logique des cards hotel. Notamment parce que le plus gros defaut de bootstrap est d'utiliser et réutiliser les mêmes noms de class. Ce qui fait qu'au début ça va très vite, mais dès qu'on commence a faire du redondant avec de légères variations alors on enchaine les conflits de class.
